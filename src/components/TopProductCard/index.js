@@ -1,13 +1,18 @@
-import { Image, Text, View } from "react-native";
-import styles from "./style";
+import {Image, Text, View} from 'react-native';
+import styles from './style';
 
-const TopProductCard = ({image, name}) => {
-    return (
-        <View style = {styles.card}>
-            <Image style = {styles.cardImage} source = {require ('../../../assets/images/banner.png')} />
-            <Text style = {styles.cardTitle}>Sugar Substitute</Text>
-        </View>
-    )
-}
+const TopProductCard = ({uri, name}) => {
+  return (
+    <View style={styles.card}>
+      <Image
+        style={styles.cardImage}
+        source={uri}
+      />
+      <View style={styles.cardBody}>
+        <Text numberOfLines = {3} style={styles.cardTitle}>{(`name ${name}`)}</Text>
+      </View>
+    </View>
+  );
+};
 
 export default TopProductCard;

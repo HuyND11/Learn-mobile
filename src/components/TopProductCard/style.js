@@ -2,27 +2,32 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     card: {
-        flexDirection: 'column',
         width: 110,
         height: 162,
-        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: '#000',
+        marginRight: 10,
     },
     cardImage: {
         width: '100%',
         height: '70%',
         resizeMode: 'cover',
+        
     },
-    cardTitle: {
+    cardBody: {
         width: '100%',
         height: '30%',
-        flex: 1,
-        alignItems: 'center',
-        textAlign: 'center',
-        justifyContent: 'center',
         backgroundColor: "#F5F7FA",
+        alignItems: "center",
+        justifyContent: 'center',
+    },
+    cardTitle: {
+        textAlign: 'center',
         fontSize: 13,
-        fontWeight: '400',
+        fontWeight: '500',
         lineHeight: 18,
+        overflow: 'hidden',
+        color: '#000000'
     }
 })
 
